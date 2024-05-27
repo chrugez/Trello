@@ -32,7 +32,7 @@ const Profile = () => {
           aria-expanded={open ? 'true' : undefined}
         >
           <Avatar
-            sx={{ width: 30, height: 30 }}
+            sx={{ width: 34, height: 34 }}
             alt='avatar'
             src='https://scontent.fhan17-1.fna.fbcdn.net/v/t39.30808-1/290384762_3237316379923400_747817231820773712_n.jpg?stp=dst-jpg_p200x200&_nc_cat=110&ccb=1-7&_nc_sid=5f2048&_nc_ohc=qKpQ0cF4ZnYQ7kNvgHU6k23&_nc_ht=scontent.fhan17-1.fna&oh=00_AYBVTIR1LIOjmTZvXiDCJxS_OB2Ptr7hPrzCIjion6r5nQ&oe=6653413A'
           />
