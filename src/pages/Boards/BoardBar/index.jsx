@@ -12,13 +12,13 @@ import Tooltip from '@mui/material/Tooltip'
 import Button from '@mui/material/Button'
 
 const MENU_STYLE = {
-  color: 'primary.main',
-  bgcolor: 'white',
+  color: 'white',
+  bgcolor: 'transparent',
   border: 'none',
   paddingX: '5px',
   borderRadius: '4px',
   '& .MuiSvgIcon-root': {
-    color: 'primary.main'
+    color: 'white'
   },
   '&:hover': {
     bgcolor: 'primary.50'
@@ -36,7 +36,8 @@ const BoardBar = () => {
       gap: 2,
       paddingX: 2,
       overflowX: 'auto',
-      borderTop: '1px solid #00bfa5'
+      borderBottom: '1px solid #ffffff',
+      backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#33495e' : '#1976d2'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <Chip
@@ -72,14 +73,26 @@ const BoardBar = () => {
       </Box>
 
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Button variant='outlined' startIcon={<PersonAddIcon />}>Invite</Button>
+        <Button
+          variant='outlined'
+          startIcon={<PersonAddIcon />}
+          sx={{
+            color: 'white',
+            borderColor: 'white',
+            '&:hover': { borderColor: 'white' }
+          }}
+        >
+          Invite
+        </Button>
         <AvatarGroup
           max={4}
           sx={{
+            gap: 2,
             '& .MuiAvatar-root': {
               width: 34,
               height: 34,
-              fontSize: 16
+              fontSize: 16,
+              border: 'none'
             }
           }}>
           <Tooltip title='Chrugez'>
