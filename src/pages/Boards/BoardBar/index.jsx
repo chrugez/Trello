@@ -34,7 +34,6 @@ const BoardBar = () => {
       alignItems: 'center',
       justifyContent: 'space-between',
       gap: 2,
-      paddingX: 2,
       overflowX: 'auto',
       borderBottom: '1px solid #ffffff',
       backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#33495e' : '#1976d2'
@@ -92,7 +91,10 @@ const BoardBar = () => {
               width: 34,
               height: 34,
               fontSize: 16,
-              border: 'none'
+              border: 'none',
+              color: 'white',
+              cursor: 'pointer',
+              '&:first-of-type': { backgroundColor: '#a4b0be' }
             }
           }}>
           <Tooltip title='Chrugez'>
