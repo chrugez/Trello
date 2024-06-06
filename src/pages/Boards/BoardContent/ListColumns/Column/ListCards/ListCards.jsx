@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box'
 import Card from './Card/Card'
 
-const ListCards = () => {
+const ListCards = ({ cards }) => {
   return (
     < Box sx={{
       padding: '0 5px',
@@ -25,13 +25,8 @@ const ListCards = () => {
         backgroundColor: '#bfc2cf'
       }
     }}>
-      <Card />
-      <Card temporyHideCard />
-      <Card temporyHideCard />
-      <Card temporyHideCard />
-      <Card temporyHideCard />
-      <Card temporyHideCard />
-      <Card temporyHideCard />
+      {cards?.map(card => <Card key={card._id} card={card} />)}
+
     </Box >
   )
 }
