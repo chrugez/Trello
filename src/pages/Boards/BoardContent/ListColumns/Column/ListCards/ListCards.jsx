@@ -6,7 +6,7 @@ const ListCards = ({ cards }) => {
   return (
     <SortableContext items={cards?.map(c => c._id)} strategy={verticalListSortingStrategy}>
       < Box sx={{
-        padding: '0 5px',
+        padding: '0 5px 5px 5px',
         margin: '0 5px',
         display: 'flex',
         flexDirection: 'column',

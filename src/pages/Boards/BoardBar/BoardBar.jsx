@@ -39,12 +39,14 @@ const BoardBar = ({ board }) => {
       backgroundColor: (theme) => theme.palette.mode === 'dark' ? '#33495e' : '#1976d2'
     }}>
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-        <Chip
-          sx={MENU_STYLE}
-          icon={<DashboardIcon />}
-          label={board?.title}
-          clickable
-        />
+        <Tooltip title={board?.description}>
+          <Chip
+            sx={MENU_STYLE}
+            icon={<DashboardIcon />}
+            label={board?.title}
+            clickable
+          />
+        </Tooltip>
         <Chip
           sx={MENU_STYLE}
           icon={<VpnLockIcon />}
