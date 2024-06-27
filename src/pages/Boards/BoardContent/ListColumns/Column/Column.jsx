@@ -22,6 +22,7 @@ import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import TextField from '@mui/material/TextField'
 import CloseIcon from '@mui/icons-material/Close'
+import { toast } from 'react-toastify'
 
 const Column = ({ column }) => {
   const {
@@ -54,7 +55,7 @@ const Column = ({ column }) => {
 
   const addNewCard = () => {
     if (!newCardTitle) {
-      // console.error('Please enter Card title!')
+      toast.error('Please enter Card title!', { position: 'bottom-right' })
       return
     }
     toggleOpenNewCardForm()
