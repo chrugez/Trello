@@ -44,7 +44,7 @@ const Card = ({ card }) => {
         overflow: 'unset',
         display: card?.FE_PlaceholderCard ? 'none' : 'block',
         border: '1px solid transparent',
-        '&:hover': {borderColor: (theme) => theme.palette.primary.main}
+        '&:hover': { borderColor: (theme) => theme.palette.primary.main }
         //overflow: card?.FE_PlaceholderCard ? 'hidden' : 'unset',
         //height: card?.FE_PlaceholderCard ? '0px' : 'unset'
       }}>
